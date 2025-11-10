@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auction Item</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-link" href="index.html">← Back to Auctions</a>
+
+  <main class="page detail-page">
+    <div class="auction-container">
+      <div class="image-section">
+        <img id="itemImage" src="https://via.placeholder.com/800x520" alt="item image" />
+      </div>
+
+      <aside class="details-section">
+        <span id="itemTag" class="tag">Category</span>
+        <h1 id="itemTitle">Item Title</h1>
+        <p id="itemDesc" class="muted">Item description</p>
+
+        <div class="bid-box">
+          <div>
+            <p class="muted">Current Bid</p>
+            <h2 id="currentBid">₦0</h2>
+            <p id="bidCount" class="muted small">0 bids</p>
+          </div>
+
+          <div id="countdown" class="timer">--:--:--</div>
+
+          <div class="bid-input">
+            <input id="bidInput" type="number" />
+            <button class="btn btn-primary" id="placeBidBtn">Place Bid</button>
+          </div>
+
+          <small class="muted">Minimum increment: <span id="minIncrement">₦100</span></small>
+        </div>
+
+        <div class="bid-history">
+          <h3>Bid History</h3>
+          <ul id="bidHistory"></ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 Elite Auction Hub</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // initialize item page after script.js loads
+    document.addEventListener('DOMContentLoaded', () => initAuctionPage());
+  </script>
+</body>
+</html>

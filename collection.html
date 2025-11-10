@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Review Bid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-link" href="item.html">← Back to Item</a>
+
+  <main class="page">
+    <section class="confirm-card">
+      <div class="confirm-icon">🧾</div>
+      <h2>Review Your Bid</h2>
+      <p class="muted" id="reviewText">Loading...</p>
+
+      <div class="confirm-details">
+        <img id="reviewImage" src="https://via.placeholder.com/420x300" alt="item" />
+        <div class="confirm-meta">
+          <p><strong id="reviewTitle">-</strong></p>
+          <p>Amount: <strong id="reviewAmount">₦0</strong></p>
+        </div>
+      </div>
+
+      <div class="confirm-actions">
+        <button class="btn btn-outline" id="editBid">Edit Bid</button>
+        <button class="btn btn-primary" id="confirmProceed">Proceed to Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 Elite Auction Hub</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', showCollectionPage);
+  </script>
+</body>
+</html>

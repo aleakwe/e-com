@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Complete Your Bid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-link" href="collection.html">← Back to Review</a>
+
+  <main class="page">
+    <section class="checkout">
+      <h1>Complete Your Bid</h1>
+      <p class="muted" id="checkoutNote">Please confirm your details to place your bid.</p>
+
+      <div class="checkout-content">
+        <div class="summary">
+          <h3>Bid Summary</h3>
+          <img id="checkoutImage" src="https://via.placeholder.com/420x300" alt="summary image" />
+          <p id="checkoutTitle">Item</p>
+          <h4>Your Bid: <span id="checkoutPrice">₦0</span></h4>
+        </div>
+
+        <form id="checkoutForm" class="bidder-info">
+          <h3>Bidder Information</h3>
+          <input id="fullname" type="text" placeholder="Full Name" required />
+          <input id="email" type="email" placeholder="Email Address" required />
+          <input id="phone" type="tel" placeholder="Phone Number" required />
+          <input id="address" type="text" placeholder="Address" />
+          <button type="submit" class="btn btn-primary">Confirm & Place Bid</button>
+          <small class="muted">By placing this bid, you agree to the terms.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 Elite Auction Hub</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initCheckoutPage);
+    document.getElementById('checkoutForm').addEventListener('submit', handleCheckoutSubmit);
+  </script>
+</body>
+</html>
