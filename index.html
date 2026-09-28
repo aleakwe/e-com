@@ -1,64 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Elite Auction — Home</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-inner">
-      <span class="live-pill">🔨 Live Auctions Now</span>
-      <h1>Bid on Premium <span class="gold">Collectibles</span></h1>
-      <p class="subtitle">Discover rare items, place competitive bids, and win extraordinary products.</p>
-
-      <div class="search-row" role="search" onsubmit="return false;">
-        <input id="siteSearch" placeholder="Search auctions..." />
-        <button class="btn" id="searchBtn">Search</button>
-      </div>
-    </div>
-  </header>
-
-  <nav class="categories">
-    <button class="cat active">All</button>
-    <button class="cat">Watches</button>
-    <button class="cat">Electronics</button>
-    <button class="cat">Collectibles</button>
-  </nav>
-
-  <main class="page">
-    <section class="auctions">
-      <div class="section-header">
-        <h2>Active Auctions</h2>
-        <p class="muted">Browse and bid on premium items ending soon</p>
-      </div>
-
-      <div id="auctionGrid" class="auction-grid">
-        <!-- cards are injected by script.js -->
-      </div>
-    </section>
-
-    <section class="subscribe">
-      <div class="subscribe-inner">
-        <div class="icon-circle">✉️</div>
-        <h2>Never Miss a Bid</h2>
-        <p class="muted">Subscribe to our newsletter and get notified about exclusive auctions.</p>
-
-        <form id="subscribeForm" class="subscribe-form" onsubmit="return false;">
-          <input id="subscribeEmail" type="email" placeholder="Enter your email" required />
-          <button class="btn btn-primary" id="subscribeBtn">Subscribe</button>
-        </form>
-
-        <small class="muted">Join 10,000+ bidders already subscribed. Unsubscribe anytime.</small>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <small>© 2025 Elite Auction Hub</small>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bidly — curated online auctions."><title>Bidly — Curated Online Auctions</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<div class="announcement">LIVE AUCTIONS <span>•</span> New lots added every week</div>
+<header class="header"><a class="brand" href="#top"><b>B</b>bidly<span>.</span></a><nav id="nav"><a href="#auctions">Auctions</a><a href="#categories">Categories</a><a href="#how">How it works</a><a href="#about">About</a></nav><div class="actions"><button class="watch" id="watch">♡ <i id="watchCount">0</i></button><button class="ghost" id="signin">Sign in</button><button class="primary" id="sell">Sell an item</button><button class="menu" id="menu">☰</button></div></header>
+<main id="top"><section class="hero"><div><small class="eyebrow">● 24/7 CURATED AUCTIONS</small><h1>Find it. <em>Want it.</em> Win it.</h1><p>Discover rare pieces, premium collectibles and everyday treasures from trusted sellers. Place a bid and make it yours.</p><div class="hero-buttons"><a class="primary big" href="#auctions">Explore live auctions ↗</a><button class="text" id="howBtn">How bidding works →</button></div><div class="stats"><div><b>12k+</b><span>active bidders</span></div><div><b>4.8k</b><span>items sold</span></div><div><b>98%</b><span>happy buyers</span></div></div></div><div class="hero-art"><div class="hero-card"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1000&q=85" alt="Luxury watch"><div><small>FEATURED LOT</small><strong>Vintage Chronograph</strong><b>₦2,850,000</b></div></div><aside class="float one">🔥 <span><b>47 bids</b><small>this hour</small></span></aside><aside class="float two">✓ <span><b>Verified seller</b><small>trusted marketplace</small></span></aside></div></section>
+<section class="categories" id="categories"><div class="heading compact"><small class="eyebrow">BROWSE BY CATEGORY</small><h2>Something for every collector.</h2></div><div class="category-grid"><button class="cat active" data-cat="All">✦<b>All lots</b><small>Everything</small></button><button class="cat" data-cat="Watches">◷<b>Watches</b><small>142 lots</small></button><button class="cat" data-cat="Art">◌<b>Art & design</b><small>86 lots</small></button><button class="cat" data-cat="Fashion">◇<b>Fashion</b><small>214 lots</small></button><button class="cat" data-cat="Tech">⌘<b>Tech</b><small>98 lots</small></button><button class="cat" data-cat="Collectibles">♢<b>Collectibles</b><small>176 lots</small></button></div></section>
+<section class="auctions" id="auctions"><div class="heading"><div><small class="eyebrow">THE MARKETPLACE</small><h2>Live & ending soon</h2><p>Competitive lots with transparent bidding.</p></div><div class="tools"><label>⌕ <input id="search" type="search" placeholder="Search auctions..."></label><select id="sort"><option value="ending">Ending soon</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></div></div><div class="live"><span>● LIVE NOW</span><b id="count">8 lots</b></div><div class="grid" id="grid"></div><div class="empty" id="empty" hidden><h3>No lots found</h3><p>Try another search or category.</p><button class="ghost" id="clear">Clear filters</button></div></section>
+<section class="how" id="how"><div><small class="eyebrow">HOW IT WORKS</small><h2>A better way to bid.</h2><p>Simple, transparent and designed around the thrill of the auction.</p></div><div class="steps"><article><b>01</b><h3>Discover</h3><p>Browse verified lots and save the ones you love.</p></article><article><b>02</b><h3>Bid</h3><p>Enter your bid and compete with other collectors.</p></article><article><b>03</b><h3>Win</h3><p>Win the lot, confirm your details and arrange delivery.</p></article></div></section>
+<section class="newsletter" id="about"><div><small class="eyebrow">STAY IN THE LOOP</small><h2>First look at new lots.</h2><p>Get weekly auction highlights and ending-soon alerts.</p></div><form id="newsletter"><input type="email" placeholder="Your email address" required><button class="primary" type="submit">Join the list</button></form></section></main>
+<footer><div><a class="brand" href="#top"><b>B</b>bidly<span>.</span></a><p>Curated auctions for curious people.</p></div><div class="links"><a href="#auctions">Auctions</a><a href="#categories">Categories</a><a href="#how">How it works</a><a href="#">Terms</a><a href="#">Privacy</a></div><small>© 2026 Bidly</small></footer>
+<div class="backdrop" id="backdrop" hidden><div class="modal"><button class="close" id="close">×</button><div id="modal"></div></div></div><div class="toast" id="toast"></div><script src="script.js"></script></body></html>
